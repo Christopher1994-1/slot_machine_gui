@@ -1,12 +1,9 @@
 from faulthandler import disable
 from tkinter import PhotoImage, Toplevel
 import tkinter
-import winsound
 import customtkinter
 from PIL import ImageTk, Image
 import random
-import wheel
-from winsound import *
 
 
 customtkinter.set_appearance_mode("System") 
@@ -17,9 +14,9 @@ root.geometry("500x350")
 root.title("Slot Machine Game")
 root.iconbitmap("darkModeV.ico")
 
-img1 = ImageTk.PhotoImage(Image.open("C:/Users/yklac/Desktop/projects/git_projects/slot_machine/images/7.png"))
-img2 = ImageTk.PhotoImage(Image.open("C:/Users/yklac/Desktop/projects/git_projects/slot_machine/images/busted.png"))
-img3 = ImageTk.PhotoImage(Image.open("C:/Users/yklac/Desktop/projects/git_projects/slot_machine/images/cherrys.png"))
+img1 = ImageTk.PhotoImage(Image.open("C:/Users/yklac/Desktop/projects/git_projects/slot_machine_gui/images/7.png"))
+img2 = ImageTk.PhotoImage(Image.open("C:/Users/yklac/Desktop/projects/git_projects/slot_machine_gui/images/busted.png"))
+img3 = ImageTk.PhotoImage(Image.open("C:/Users/yklac/Desktop/projects/git_projects/slot_machine_gui/images/cherrys.png"))
 img1_path = "C:/Users/yklac/Desktop/projects/git_projects/slot_machine/images/7.png"
 img2_path = "C:/Users/yklac/Desktop/projects/git_projects/slot_machine/images/busted.png"
 img3_path = "C:/Users/yklac/Desktop/projects/git_projects/slot_machine/images/cherrys.png"
@@ -69,7 +66,6 @@ def spin():
 
         if wheel1 == 1 and wheel2 == 1 and wheel3 == 1:
             error.configure(text="You Win!")
-            winsound.PlaySound("jackpot.mp3", winsound.SND_ASYNC)
             balance_amount += 1000
             first_frame_balance_label.configure(text=f"Total Balnce:\n{balance_amount}")
 
